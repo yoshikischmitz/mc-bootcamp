@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet"  type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <style>
+    .chat {
+      list-style: none; /* */
+      margin: 0;
+      padding: 0;
+    }
+
+    .chat li {
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px dotted black;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function() {
+      $("#btn-input").keypress(function(e){
+          text = $(this).val();
+          console.log(text);
+       });
+    });
+  </script>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="chat-panel col-md-5">
+          <ul class="chat">
+            <li>Message</li>
+            <li>Message</li>
+          </ul>
+          <div class="input-group">
+          <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+          <span class="input-group-btn">
+            <button class="btn btn-warning btn-sm" id="btn-chat">
+              Send</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
